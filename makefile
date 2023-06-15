@@ -1,7 +1,7 @@
 # Read the comments for compiling with macOS
 
 main: main.o libisentlib.a
-	gcc -Wall $^ -o $@ -lm -lglut -lGL -lX11
+	gcc -Wall main.o libisentlib.a -o main -lm -lglut -lGL -lX11 -no-pie
 # For macOS, comment the preceding command line (put a # at the beginning)
 # and uncomment the following command line:
 #	gcc -Wall  $^ -o $@ -lm -framework OpenGL -framework GLUT
